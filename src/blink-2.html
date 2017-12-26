@@ -1,0 +1,54 @@
+
+<!--
+
+blink-2.html
+
+Flashes a greeting. 
+
+Demonstrates jQuery.
+
+David J. Malan
+malan@harvard.edu
+
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="//code.jquery.com/jquery.js"></script>
+        <script>
+
+            $(document).ready(function() {
+
+                // blink every 500ms
+                window.setInterval(function() {
+
+                    // toggles visibility of greeting
+                    if ($('#greeting').css('visibility') === 'hidden') {
+                        $('#greeting').css('visibility', 'visible');
+                    }
+                    else {
+                        $('#greeting').css('visibility', 'hidden');
+                    }
+                }, 500);
+            });
+
+        </script>
+        <style>
+
+            #greeting {
+                font-size: 96pt;
+                margin: 240px;
+                text-align: center;
+            }
+
+        </style>
+        <title>blink-2</title>
+    </head>
+    <body>
+        <div id="greeting">
+            hello, world
+        </div>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+
+<!--
+
+blink-3.html
+
+Flashes a greeting. 
+
+Demonstrates jQuery effect.
+
+David J. Malan
+malan@harvard.edu
+
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="//code.jquery.com/jquery.js"></script>
+        <script>
+
+            $(function() {
+
+                // blink every 500ms
+                window.setInterval(function() {
+
+                    // toggles visibility of greeting
+                    $('#greeting').toggle();
+                }, 500);
+            });
+
+        </script>
+        <style>
+
+            #greeting {
+                font-size: 96pt;
+                margin: 240px;
+                text-align: center;
+            }
+
+        </style>
+        <title>blink-3</title>
+    </head>
+    <body>
+        <div id="greeting">
+            hello, world
+        </div>
+    </body>
+</html>

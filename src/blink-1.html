@@ -1,0 +1,51 @@
+
+<!--
+
+blink-1.html
+
+Flashes a greeting. 
+
+Demonstrates anonymous function.
+
+David J. Malan
+malan@harvard.edu
+
+-->
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script>
+
+            // blink every 500ms
+            window.setInterval(function() {
+
+                // toggles visibility of greeting
+                var div = document.getElementById('greeting');
+                if (div.style.visibility === 'hidden') {
+                    div.style.visibility = 'visible';
+                }
+                else {
+                    div.style.visibility = 'hidden';
+                }
+            }, 500);
+
+        </script>
+        <style>
+
+            #greeting {
+                font-size: 96pt;
+                margin: 240px;
+                text-align: center;
+            }
+
+        </style>
+        <title>blink-1</title>
+    </head>
+    <body>
+        <div id="greeting">
+            hello, world
+        </div>
+    </body>
+</html>
